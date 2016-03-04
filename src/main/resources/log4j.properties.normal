@@ -1,0 +1,54 @@
+### Root Level ###
+log4j.rootLogger=WARN, LOGFILE, CONSOLE
+
+### Configuration for the LOGFILE appender ###
+log4j.appender.LOGFILE=org.apache.log4j.RollingFileAppender
+log4j.appender.LOGFILE.MaxFileSize=25MB
+log4j.appender.LOGFILE.MaxBackupIndex=10
+log4j.appender.LOGFILE.File=logs/dnet.log
+log4j.appender.LOGFILE.Append=true
+log4j.appender.LOGFILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.LOGFILE.layout.ConversionPattern=[%-5p] %d %c - %m%n
+
+### Configuration for the CONSOLE appender ###
+log4j.appender.CONSOLE=org.apache.log4j.ConsoleAppender
+log4j.appender.CONSOLE.layout=org.apache.log4j.PatternLayout
+log4j.appender.CONSOLE.layout.ConversionPattern=[%-5p] %d %c - %m%n
+
+org.apache.cxf.Logger=org.apache.cxf.common.logging.Log4jLogger
+
+### Application Level ###
+log4j.logger.eu.dnetlib=INFO
+log4j.logger.eu.dnetlib.enabling.is.sn=INFO
+log4j.logger.org.apache.cxf.interceptor=FATAL
+log4j.logger.org.apache.cxf.ws.addressing.ContextUtils=FATAL
+log4j.logger.eu.dnetlib.enabling.tools.AbstractBaseService=INFO
+log4j.logger.eu.dnetlib.xml.database.LoggingTrigger=WARN
+log4j.logger.eu.dnetlib.enabling.tools.registration.ServiceRegistrator=INFO
+log4j.logger.eu.dnetlib.enabling.inspector=FATAL
+log4j.logger.eu.dnetlib.enabling.inspector.SubscriptionController=DEBUG
+log4j.logger.eu.dnetlib.springutils.stringtemplate.StringTemplateViewResolver=FATAL             
+log4j.logger.eu.dnetlib.enabling.is.sn.SynchronousNotificationSenderImpl=WARN
+log4j.logger.eu.dnetlib.enabling.tools.LocalServiceResolverImpl=WARN
+log4j.logger.eu.dnetlib.enabling.is.sn.NotificationInvokerImpl=WARN
+log4j.logger.eu.dnetlib.data.collective=INFO
+log4j.logger.eu.dnetlib.data.hadoop.utils.ScanFactory=DEBUG
+log4j.logger.org.apache.xerces.parsers.SAXParser=OFF
+log4j.logger.eu.dnetlib.conf.PropertyFetcher=WARN
+#log4j.logger.eu.dnetlib.data.transform.XsltRowTransformerFactory=DEBUG
+
+log4j.logger.eu.dnetlib.enabling.is.sn.ISSNServiceImpl=OFF
+log4j.logger.eu.dnetlib.enabling.datasources.DatasourceManagerClients=FATAL
+log4j.logger.eu.dnetlib.data.mdstore.modular.mongodb.utils.MetadataCheckJob=DEBUG
+log4j.logger.eu.dnetlib.enabling.is.sn.ISSNServiceCore=WARN
+log4j.logger.eu.dnetlib.xml.database.exist.ExistDatabase=WARN
+log4j.logger.eu.dnetlib.enabling.is.store.AbstractContentInitializer=FATAL
+
+log4j.logger.org.apache.hadoop.hbase.mapreduce.TableInputFormatBase=FATAL
+
+### Spring ###
+log4j.logger.org.springframework=ERROR
+
+log4j.logger.eu.dnetlib.openaire=DEBUG
+
+

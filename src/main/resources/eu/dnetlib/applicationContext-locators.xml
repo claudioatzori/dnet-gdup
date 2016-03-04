@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:sec="http://cxf.apache.org/configuration/security" xmlns:wsa="http://cxf.apache.org/ws/addressing"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:http="http://cxf.apache.org/transports/http/configuration"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://cxf.apache.org/ws/addressing http://cxf.apache.org/schemas/ws-addr-conf.xsd
+    http://cxf.apache.org/configuration/security http://cxf.apache.org/schemas/configuration/security.xsd
+    http://cxf.apache.org/transports/http/configuration http://cxf.apache.org/schemas/configuration/http-conf.xsd
+    http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<!-- service locators: TODO: parameterize via properties -->
+	<bean id="transformationServiceLocator" class="eu.dnetlib.enabling.tools.DynamicServiceLocator"
+		p:clazz="eu.dnetlib.data.transformation.service.rmi.TransformationService"
+		p:lookUpLocator-ref="lookupLocator" p:serviceResolver-ref="serviceResolver" />
+
+	<bean id="downloadServiceLocator" class="eu.dnetlib.enabling.tools.DynamicServiceLocator"
+		p:clazz="eu.dnetlib.data.download.rmi.DownloadService"
+		p:lookUpLocator-ref="lookupLocator" p:serviceResolver-ref="serviceResolver" />
+
+	<bean id="dynamicHadoopServiceLocator" class="eu.dnetlib.enabling.tools.DynamicServiceLocator" 
+		p:clazz="eu.dnetlib.data.hadoop.rmi.HadoopService"
+		p:lookUpLocator-ref="lookupLocator" p:serviceResolver-ref="serviceResolver" />
+
+</beans>
