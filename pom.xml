@@ -73,7 +73,7 @@
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
 			<artifactId>dnet-mongo-logging</artifactId>
-			<version>[1.0.0,2.0.0)</version>
+			<version>[2.0.0,3.0.0)</version>
 		</dependency>
 
 		<!-- Modular User Interfaces -->
@@ -81,6 +81,12 @@
 			<groupId>eu.dnetlib</groupId>
 			<artifactId>dnet-modular-ui</artifactId>
 			<version>[3.0.0,4.0.0)</version>
+		</dependency>
+
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-objectStore-ui</artifactId>
+			<version>[1.0.0,2.0.0)</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
@@ -109,6 +115,16 @@
 		</dependency>
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-modular-vocabularies-ui</artifactId>
+			<version>[2.0.1,3.0.0)</version>
+		</dependency>
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-modular-cleaning-rules-ui</artifactId>
+			<version>[2.0.0,3.0.0)</version>
+		</dependency>
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
 			<artifactId>dnet-modular-database-ui</artifactId>
 			<version>[2.0.0,3.0.0)</version>
 		</dependency>
@@ -117,18 +133,27 @@
 			<artifactId>dnet-modular-index-ui</artifactId>
 			<version>[2.0.1,3.0.0)</version>
 		</dependency>
-
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-openaire-blacklist</artifactId>
+			<version>[1.0.0,2.0.0)</version>
+		</dependency>
 
 		<!-- Aggregation services -->
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
 			<artifactId>cnr-mongo-mdstore</artifactId>
-			<version>[4.1.7,5.0.0)</version>
+			<version>[5.0.0,6.0.0)</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
 			<artifactId>dnet-modular-collector-service</artifactId>
 			<version>[3.0.0,4.0.0)</version>
+		</dependency>
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-fs-objectstore</artifactId>
+			<version>[2.0.0,3.0.0)</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
@@ -139,19 +164,32 @@
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
 			<artifactId>cnr-enabling-database-service</artifactId>
-			<version>[2.0.0,3.0.0)</version>
+			<version>[3.0.0,4.0.0)</version>
 		</dependency>
-
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-openaireplus-profiles</artifactId>
+			<version>[1.0.0,2.0.0)</version>
+		</dependency>
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>cnr-data-utility-cleaner-service</artifactId>
+			<version>[3.0.0,4.0.0)</version>
+		</dependency>
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
 			<artifactId>dnet-openaireplus-workflows</artifactId>
-			<version>[5.0.0,6.0.0)</version>
+			<version>[6.0.0,7.0.0)</version>
 		</dependency>
-
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-validator-workflows</artifactId>
+			<version>[1.0.0,2.0.0)</version>
+		</dependency>
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
 			<artifactId>dnet-deduplication</artifactId>
-			<version>[1.0.0,2.0.0)</version>
+			<version>[1.5.2, 2.0.0)</version>
 		</dependency>
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
@@ -167,15 +205,18 @@
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
 			<artifactId>dnet-actionmanager-service</artifactId>
-			<version>[3.0.0,4.0.0)</version>
+			<version>[5.0.0, 6.0.0)</version>
 		</dependency>
-
-                <dependency>
-                        <groupId>eu.dnetlib</groupId>
-                        <artifactId>dnet-openaireplus-profiles</artifactId>
-                        <version>[1.0.0,2.0.0)</version>
-                </dependency>
-
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-download-service</artifactId>
+			<version>[2.0.0,2.2.0)</version>
+		</dependency>
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-download-plugins</artifactId>
+			<version>[2.0.0,3.0.0)</version>
+		</dependency>
 
 		<dependency>
 			<groupId>eu.dnetlib</groupId>
@@ -188,19 +229,16 @@
 			<version>[1.0.0,2.0.0)</version>
 		</dependency>
 
-		<!-- Light-ui for pre-public check -->
-		<!-- 		<dependency> -->
-		<!-- 			<groupId>eu.dnetlib</groupId> -->
-		<!-- 			<artifactId>dnet-modular-lightui-ui</artifactId> -->
-		<!-- 			<version>[2.0.0,3.0.0)</version> -->
-		<!-- 		</dependency> -->
-
 		<dependency>
 			<groupId>xerces</groupId>
 			<artifactId>xercesImpl</artifactId>
 			<version>2.11.0</version>
 			<scope>compile</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>eu.dnetlib</groupId>
+			<artifactId>dnet-mapreduce-jobs</artifactId>
+			<version>[0.0.9.0,0.1.0.0)</version>
+		</dependency>
 	</dependencies>
 </project>
